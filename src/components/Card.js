@@ -6,19 +6,12 @@ function Card({ item }) {
   const { label, image, url, ingredientLines } = item.recipe;
   return (
     <div className="card">
-      <h3 className="food-label">{label}</h3>
-      <img className="food-image" src={image} alt="" />
-      <a
-        className="recipe-link"
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <h3>{label}</h3>
+      <img src={image} alt="" />
+      <a href={url} target="_blank" rel="noopener noreferrer">
         Full Recipe and Procedure
       </a>
-      <button className="ingredient-button" onClick={() => setShow(!show)}>
-        Ingredients
-      </button>
+      <button onClick={() => setShow(!show)}>Ingredients</button>
       {show && <IngredientList ingredients={ingredientLines} />}
     </div>
   );

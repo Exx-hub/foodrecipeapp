@@ -7,77 +7,171 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
-  box-sizing: border-box;
 }
 
-/* html {
+html {
   font-size: 63.5%;
-} */
+}
 
 .App-container {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .header {
   text-transform: uppercase;
-  color: green;
-  border: 2px solid red;
+  color: #8732a8;
+  margin: 4rem 0;
+  font-size: 8rem;
+  text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
+  letter-spacing: 0.1rem;
+  font-style: italic;
 }
 
 .form {
-  border: 2px solid blue;
+  width: 60rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+  box-shadow: 1rem 2rem 5rem #aaa;
+  margin-bottom: 5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: -2.6rem;
+  left: 1.5px;
+  background-color: rgb(233, 72, 72);
+  width: calc(100% - 0.4rem);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.alert h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.search-input {
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  padding: 0 0.5rem;
+  width: 60%;
+  color: #555;
+}
+
+.search-button {
+  background-color: #8732a8;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 25%;
+  text-transform: uppercase;
+  color: white;
 }
 
 .cardlist-container {
-  border: 2px solid violet;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 90%;
+  align-items: flex-start;
 }
 
 /* testing things out */
 .card {
-  /* border: 2px solid blue; */
-  background-color: gray;
+  background-color: #d3d3d3;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-  margin: 15px 0;
-  width: 300px;
+  padding: 2rem;
+  margin: 3rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 2rem 3rem 5rem #aaa;
+  position: relative;
 }
-.food-label {
-  /* border: 2px solid magenta; */
-  color: white;
-  background-color: gray;
-  opacity: 0.7;
+.card h3 {
   position: absolute;
-  margin-top: 10px;
-  margin-left: 12px;
-  width: 19%;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(161, 161, 161, 0.7);
+  top: 2.8rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-shadow: 0 0.5rem 0.5rem #555;
 }
-.food-image {
-  /* border: 5px solid orange; */
-  align-self: center;
-  width: 300px;
-  padding: 5px;
+.card img {
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
-.recipe-link {
-  /* border: 2px solid brown; */
-  display: block;
-  margin-left: 10px;
+
+.card a {
+  font-size: 1.8rem;
+  color: #8732a8;
 }
-.ingredient-button {
-  /* border: 2px solid steelblue; */
-  background-color: green;
-  margin: 10px;
+.card button {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #8732a8;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
 }
 .ingredient-list {
-  border: 2px solid black;
-  width: 50%;
-  /* display: none; */
+  color: #8732a8;
+  margin-top: 5px;
+}
+
+.ingredient-list-item {
+  background-color: #fff;
+  margin: 4px 0;
+  font-size: small;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 741px) {
+  .header {
+    font-size: 5rem;
+  }
+  .form {
+    width: 50rem;
+  }
+  .card {
+    width: 30rem;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 3rem;
+  }
+  .form {
+    width: 40rem;
+    height: 5rem;
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 30rem;
+  }
 }
